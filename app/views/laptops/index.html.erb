@@ -1,0 +1,21 @@
+<h1>Electronics eCommerce</h1>
+
+<h3>Listing Laptops</h3> 
+
+<% @laptops.each do |laptop| %>
+
+    <div>
+    	<%= laptop.brand %>
+         
+    	<%= link_to 'Show', laptop_path(laptop)%> 
+    	<%= link_to 'Edit', edit_laptop_path(laptop) %>
+    	<%= link_to 'Destroy', laptop_path(laptop), method: :delete, data: { confirm: 'Are you sure?' } %> 
+    </div>
+
+<% end %>
+
+<footer>
+	<p>
+    <%= link_to 'New laptop', new_laptop_path %>
+	</p>
+</footer>
